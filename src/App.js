@@ -1,27 +1,29 @@
+import { Typography, Divider } from 'antd';
 import './App.css';
+import TodoList from './components/TodoList';
+import Filters from './components/Filters';
+
+const { Title } = Typography;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src="Octocat.png" className="App-logo" alt="logo" />
-        <p>
-          GitHub Codespaces <span className="heart">♥️</span> React
-        </p>
-        <p className="small">
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </p>
-      </header>
+    <div
+      style={{
+        width: 500,
+        margin: '0 auto',
+        display: 'flex',
+        flexDirection: 'column',
+        backgroundColor: 'white',
+        padding: 20,
+        boxShadow: '0 0 10px 4px #bfbfbf',
+        borderRadius: 5,
+        height: '90vh',
+      }}
+    >
+      <Title style={{ textAlign: 'center' }}>TODO APP with REDUX</Title>
+      <Filters />
+      <Divider />
+      <TodoList />
     </div>
   );
 }
